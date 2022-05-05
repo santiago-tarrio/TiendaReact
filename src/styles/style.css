@@ -23,6 +23,24 @@
     cursor: pointer;
 }
 
+.cartContainer {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: -23px;
+}
+
+.cartIcon {
+    width: 30px;
+    height: auto;
+    margin-top: 5px;
+}
+
+.cartText {
+    color: black;
+}
+
 h1 {
     font-size: 40x;
 }
