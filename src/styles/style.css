@@ -44,3 +44,8 @@
 h1 {
     font-size: 40x;
 }
+
+.counterContainer{
+    display: flex;
+    flex-direction: row;
+}
