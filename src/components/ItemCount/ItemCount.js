@@ -7,7 +7,7 @@ export default function ItemCount ({initial, stock, onAdd}){
             setCount(count + 1)
     }
     const handleRest = () => {
-        if (count > 0)
+        if (count > 1)
             setCount(count - 1)
     }
     useEffect(() => {

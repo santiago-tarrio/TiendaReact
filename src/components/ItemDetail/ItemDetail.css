@@ -1,0 +1,25 @@
+.detailContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.imgDetail{
+    height: 500px;
+    width: auto;
+}
+
+.dataContainer{
+    margin-left: 5px;
+}
+
+.dataContainer p{
+    padding-bottom: 4px;
+    font-size: 2rem;
+}
+
+.dataContainer h2{
+    font-size:2.4rem;
+    padding-bottom: 4px;
+}
+
