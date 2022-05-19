@@ -3,18 +3,14 @@ import axios from "axios"
 import ItemDetail from "../ItemDetail/ItemDetail"
 
 
-export default function ItemDetailContainer () {
+export default function ItemDetailContainer (id) {
   const [product, setProduct] = useState([])
-
-  const getItem = () => {
-    axios.get('https://apimocha.com/nbastore/jerseys').then((res) => {
-     setProduct(res.data[2])
-    })
-  } 
-
+  console.log(id.id)
   useEffect(() => {
-    getItem();
-  }, [])
+    axios.get('https://apimocha.com/nbastore/products').then((res) => {
+    setProduct(res.data.find(element => element.id === id.id))  
+    })
+  }, [id])
 
   
   return (

@@ -23,6 +23,12 @@
     cursor: pointer;
 }
 
+.linkList li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .cartContainer {
     width: 45px;
     height: 45px;

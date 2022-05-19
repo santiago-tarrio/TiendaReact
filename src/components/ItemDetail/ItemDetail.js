@@ -13,7 +13,6 @@ export default function ItemDetail (data) {
             </div>
             <div className="dataContainer">
                 <h2>{data.product.title}</h2>
-                <p>Camiseta titular de Jummy Butler</p>
                 <p>$ {data.product.price}</p>
                 <ItemCount initial={1} stock={10} onAdd={onAdd}/>
             </div>
