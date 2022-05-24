@@ -20,12 +20,12 @@ export default function Navbar (){
                         </NavLink>  
                     </li>
                     <li>
-                        <NavLink to="category/jerseys">
+                        <NavLink to="/category/jerseys">
                             Jerseys
                         </NavLink>  
                     </li>
                     <li>
-                        <NavLink to="category/hoodies">
+                        <NavLink to="/category/hoodies">
                             Hoodies
                         </NavLink>  
                     </li>

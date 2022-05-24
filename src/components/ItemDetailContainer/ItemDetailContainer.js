@@ -3,6 +3,7 @@ import axios from "axios"
 import ItemDetail from "../ItemDetail/ItemDetail"
 
 
+
 export default function ItemDetailContainer (id) {
   const [product, setProduct] = useState([])
   console.log(id.id)
