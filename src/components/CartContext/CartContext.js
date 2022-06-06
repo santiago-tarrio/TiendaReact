@@ -41,7 +41,7 @@ const CartProvider = ({children}) => {
 
     console.log(cart)
     return (
-        <Provider value={{addItem, cart}}>{children}</Provider>
+        <Provider value={{addItem, cart, removeItem, clearCart}}>{children}</Provider>
     )
 }
 
