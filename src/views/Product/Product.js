@@ -7,7 +7,7 @@ export default function Products () {
     return (
         <div className="App">
             <Navbar />
-            <ItemDetailContainer id={+id}  />
+            <ItemDetailContainer id={id}  />
         </div>
     );
 }

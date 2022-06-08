@@ -7,7 +7,9 @@ export default function Products () {
     <div className="App">
         <Navbar />
         <h1>Los mejores productos NBA</h1>
+        <h2>Jerseys</h2>
         <ItemListContainer categoryname={"jerseys"}  />
+        <h2>Hoodies</h2>
         <ItemListContainer categoryname={"hoodies"}  />
     </div>
     );

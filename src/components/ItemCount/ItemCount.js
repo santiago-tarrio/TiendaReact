@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 
+
 export default function ItemCount ({initial, stock, onAdd}){
     const [count, setCount] = useState(parseInt(initial))
+    
     const handleAdd = () => {
         if (count >= 0 && count < stock)
             setCount(count + 1)
@@ -13,6 +15,7 @@ export default function ItemCount ({initial, stock, onAdd}){
     useEffect(() => {
         setCount(parseInt(initial));
     }, [initial])
+    
     return(
         <div>
             <div className="counterContainer">
