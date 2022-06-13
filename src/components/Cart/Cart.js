@@ -5,10 +5,11 @@ import React, { useEffect, useState } from "react";
 
 export default function Cart(){
     const { cart } = React.useContext(CartContext);
-    const [cartQuantity, setCartQuantity] = useState(0)
+    const [cartQuantity, setCartQuantity] = useState("0")
     
     console.log(cart)
-    
+
+
     useEffect(() => {
         let q = 0
         cart.forEach(a => q += (1 * a.quantity))

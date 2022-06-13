@@ -30,7 +30,10 @@ export default function Navbar (){
                         </NavLink>  
                     </li>
                     <li>
-                    <Cart />
+                    
+                    <NavLink to="/cart">
+                        <Cart />
+                    </NavLink>
                     </li>
                 </ul>
             </nav>

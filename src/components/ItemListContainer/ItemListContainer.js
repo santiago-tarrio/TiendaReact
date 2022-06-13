@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
-import axios from "axios"
 import {getFirestore, getDocs, collection} from "firebase/firestore";
 
 export default function ItemListContainer (categoryname) {

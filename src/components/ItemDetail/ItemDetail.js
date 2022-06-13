@@ -1,6 +1,6 @@
 import ItemCount from "../ItemCount/ItemCount";
 import './ItemDetail.css'
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "../CartContext/CartContext"
 
@@ -15,6 +15,13 @@ export default function ItemDetail (data) {
         setQuantity(total)
     }
 
+    useEffect(() => {
+        if(quantity > 0){
+        addItem(data.product, quantity);
+        console.log(quantity)
+        }
+    }, [quantity])
+
     return(
         <div className="detailContainer">
             <div className="imgContainer">
@@ -24,7 +31,7 @@ export default function ItemDetail (data) {
                 <h2>{data.product.title}</h2>
                 <p>$ {data.product.price}</p>
                 {
-                    toCart ? <Link to='/cart' className="toCart" onClick={() => addItem(data.product, quantity)}>Finalizar la compra</Link> : <ItemCount initial={1} stock={10} onAdd={onAdd}/>
+                    toCart ? <Link to='/cart' className="toCart">Finalizar la compra</Link> : <ItemCount initial={1} stock={data.product.stock} onAdd={onAdd}/>
                 }
                 
             </div>

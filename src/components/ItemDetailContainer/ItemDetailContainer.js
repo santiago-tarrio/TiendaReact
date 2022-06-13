@@ -1,5 +1,4 @@
 import React, { useState, useEffect} from "react"
-import axios from "axios"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import {getFirestore, getDoc, doc} from "firebase/firestore";
 
