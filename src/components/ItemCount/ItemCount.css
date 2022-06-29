@@ -1,0 +1,29 @@
+.counterContainer input{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0,107,183,1);
+    border: none;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.addCart{
+    width: 160px;
+    height: 32px;
+    border-radius: 20px;
+    background-color: rgb(237,23,75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    margin-top: 10px;
+    font-size: 16px;
+}

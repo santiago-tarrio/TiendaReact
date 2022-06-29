@@ -1,9 +1,12 @@
 .cartContainer{
     margin-top: 10px;
+    display: flex;
+
 }
 
 .cartItem{
     display: flex;
+    align-items: center;
 }
 
 .cartItemText{
@@ -15,4 +18,130 @@
 .pictureCart{
     width: 150px;
     height: auto;
+}
+
+.botonBorrar{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(237,23,75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+.botonEliminar, .emptyCart{
+    width: 135px;
+    height: 32px;
+    border-radius: 20px;
+    background-color: rgb(237,23,75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.emptyCart{
+    text-decoration: none;
+    font-size: 13px;
+    width: 100px;
+}
+
+.cartItemText p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.itemsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border: 1px solid rgba(0,107,183,1);
+    width: 700px;
+    height: auto;
+
+}
+
+.formContainer{
+    width: 750px;
+    height: 350px;
+    background-color: #e7e7e7;
+    margin-left: 60px;
+    border-radius: 10px;
+}
+
+.formCart{
+    display: flex;
+    flex-direction: column;
+}
+
+.formCart input{
+    border: 2px solid rgba(0,107,183,1);
+    width: 700px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-left: 25px;
+}
+
+.finalizarCompra{
+    width: 135px;
+    height: 32px;
+    border-radius: 20px;
+    background-color: rgba(0,107,183,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.totalCart{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: -130px;
+    height: 20px;
+}
+
+.cartContainer span{
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+}
+
+.codigo{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgba(0,107,183,1);
+}
+
+.cartZero{
+    width: 160px;
+    height: 42px;
+    border-radius: 20px;
+    background-color: rgb(237,23,75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 3px;
+    text-decoration: none;
 }

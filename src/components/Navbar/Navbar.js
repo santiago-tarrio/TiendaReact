@@ -1,12 +1,13 @@
 import Cart from "../Cart/Cart";
 import { NavLink } from "react-router-dom"
+import logo from './logoNba.png'
 
 export default function Navbar (){
 
     return (
             <nav className="header">
                 <div className="containerLogo">
-                    <p>img del logo</p>
+                    <img src={logo} alt="logo nba" />
                 </div>
                 <ul className="linkList">
                     <li>

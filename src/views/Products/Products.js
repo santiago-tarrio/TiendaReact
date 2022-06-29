@@ -11,6 +11,8 @@ export default function Products () {
         <ItemListContainer categoryname={"jerseys"}  />
         <h2>Hoodies</h2>
         <ItemListContainer categoryname={"hoodies"}  />
+        <h2>Headwear</h2>
+        <ItemListContainer categoryname={"headwear"}  />
     </div>
     );
 }

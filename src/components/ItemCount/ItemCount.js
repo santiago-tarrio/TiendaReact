@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './ItemCount.css'
 
 
 export default function ItemCount ({initial, stock, onAdd}){
@@ -26,7 +27,7 @@ export default function ItemCount ({initial, stock, onAdd}){
                 <input type="button" value="-" onClick={handleRest} />
             </div>
             <div>
-                <button disabled={stock <= 0} onClick={() => onAdd(count)}>Agregar al carrito</button>
+                <button className="addCart" disabled={stock <= 0} onClick={() => onAdd(count)}>Agregar al carrito</button>
             </div>
         </div>
     );

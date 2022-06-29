@@ -1,0 +1,32 @@
+.cartLogoContainer {
+    width: 80px;
+    height: 40px;
+    border-radius: 5%;
+    background-color: white;
+    margin-top: -23px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cartIcon {
+    width: 32px;
+    height: auto;
+}
+
+.cartNumber{
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartText {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+

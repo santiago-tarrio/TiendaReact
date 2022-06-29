@@ -9,6 +9,7 @@ export default function CartContainer (){
     const [total, setTotal] = useState([])
     const [data, setData] = useState()
     const [orderId, setOrderId] = React.useState()
+    const [orderName, setOrderName] = React.useState()
     const [cartCheck, setCartCheck] = useState(false)
     
 
@@ -21,16 +22,12 @@ export default function CartContainer (){
         }
     }, [cart])
 
-    console.log(orderId)
-
-     
-      // Guardamos los datos del formulario en un estado cada vez que se modifica un campo
       const handleChange = (event) => {
         const { name, value } = event.target;
         setData({ ...data, [name]: value });
+        setOrderName(value)
       }
     
-      // Accion que se ejecuta al hacer click en el boton para enviar el formulario
       const handleSubmit = async (event) => {
         event.preventDefault();
         const order = {
@@ -38,6 +35,7 @@ export default function CartContainer (){
           items: cart,
           total: total,
         };
+        setOrderName(data.name)
         const db = getFirestore()
         const ordersCollection = collection(db, "orders")
         await addDoc(ordersCollection, order).then(({id}) => {
@@ -65,9 +63,10 @@ export default function CartContainer (){
 
     return cartCheck ? (
         <div>
-        {(orderId !== undefined) ? <span>Tu código de compra es: {orderId}</span>:
+        {(orderId !== undefined) ? <div><p>Felicitaciones {orderName} </p><p className="codigo">Tu código de compra es: {orderId}</p></div>:
 
             <div className="cartContainer">
+                <div className="itemsContainer">
                 {cart.map (item =>
                         <div className="cartItem">
                             <img src={item.picture} alt={item.title} className="pictureCart" />
@@ -76,43 +75,48 @@ export default function CartContainer (){
                             <p>${item.price}</p>
                             <p>Cantidad: {item.quantity}</p>
                             </div>
-                            <div onClick={() => removeItem(item, item.quantity)}><span>X</span></div>
+                            <div className="botonBorrar" onClick={() => removeItem(item, item.quantity)}><span>X</span></div>
                         </div>
                 )}
-                {(cart.length > 0) && <div onClick={() => clearCart()}><span>Borrar todo</span></div>}
-                {(cart.length > 0) ? <p>Total: ${total} </p> : <NavLink to="/">Vaciaste el carrito. Seguí con tu compra</NavLink>}
-
-                <form onSubmit={handleSubmit}>
-                            <input
-                            type="text"
-                            name="name"
-                            placeholder="Name"
-                            onChange={handleChange}
-                            />
-                            <input
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                            onChange={handleChange}
-                            />
-                            <input
-                            type="phone"
-                            name="phone"
-                            placeholder="Phone"
-                            onChange={handleChange}
-                            />
-                            <input
-                            type="submit"
-                            value="Finalizar compra"
-                            />
-                        </form>
+                </div>
+                {(cart.length > 0) && <div className="botonEliminar" onClick={() => clearCart()}><span>Borrar todo</span></div>}
+                {(cart.length > 0) ? <div><p className="totalCart">Total: ${total} </p>
+                <div className="formContainer">
+                  <form className="formCart" onSubmit={handleSubmit}>
+                              <input
+                              type="text"
+                              name="name"
+                              placeholder="Name"
+                              onChange={handleChange}
+                              />
+                              <input
+                              type="email"
+                              name="email"
+                              placeholder="Email"
+                              onChange={handleChange}
+                              />
+                              <input
+                              type="phone"
+                              name="phone"
+                              placeholder="Phone"
+                              onChange={handleChange}
+                              />
+                              <input className="finalizarCompra"
+                              type="submit"
+                              value="Finalizar compra"
+                              />
+                    </form>
+                  </div>
+                </div>
+                : <div><span >Vaciaste el carrito. </span><NavLink className="emptyCart" to="/">Seguí tu compra</NavLink></div>}
+                
             </div>
         }
         </div>   
     ) : (
         <div>
             <p>El Carrito esta vacio</p>
-            <NavLink to="/">
+            <NavLink className="cartZero" to="/">
                 Seguí con tu compra
             </NavLink>
         </div>

@@ -28,7 +28,7 @@ export default function ItemDetail (data) {
                 <img src={data.product.picture} alt={data.product.title} className="imgDetail" />
             </div>
             <div className="dataContainer">
-                <h2>{data.product.title}</h2>
+                <h2 className="h2">{data.product.title}</h2>
                 <p>$ {data.product.price}</p>
                 {
                     toCart ? <Link to='/cart' className="toCart">Finalizar la compra</Link> : <ItemCount initial={1} stock={data.product.stock} onAdd={onAdd}/>
